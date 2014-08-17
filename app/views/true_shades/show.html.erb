@@ -1,0 +1,20 @@
+<h1>Show True Shade</h1>
+
+
+
+<%= @true_shade.name %>
+	<br><br>
+	<ul>
+		<% @foundations.each do |foundation| %>
+			<% if foundation.true_shade == @true_shade %>
+		<li>
+			<%= link_to foundation.name, true_shade_foundation_path(foundation.true_shade.id, foundation.id) %>
+		</li>
+	<% end %>
+	<% end %>
+	</ul>
+
+
+
+<br><%= link_to "Click to add another foundation in your true shade!!", new_true_shade_foundation_path(@true_shade, @foundation) %>
+	
