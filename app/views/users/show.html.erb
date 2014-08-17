@@ -1,16 +1,30 @@
 <!DOCTYPE html>
 	<head>
+		<style>
+			body {
+				text-align: center;
+			}
+			h4 {
+				font-family: helvetica;
+			}
+		</style>
 		<title>
 		</title>
 	</head>
 	<body>
+ 
+		<h1>Hi, <%= current_user.name %> :)</h1>
+		<h4><br>Your Current Matching Foundation: <strong><font size="5px"><%= @user.foundation.name %></font></strong>
+		<br><br>Your true shade is: <strong><font size="5px"><%= @user.foundation.true_shade.name %></font></strong>
+		<br><br><%= @user.foundation.true_shade.description %>
+		<br><br><%= link_to "Click to see more foundations in your true shade", true_shade_path(@user.foundation.true_shade) %></h4>
 
-		<h1>Your True Shade</h1>
-		<br>Your Current Matching Foundation: <%= @user.foundation.name %>
-		<br>Your true shade is: <%= @user.foundation.true_shade.name %>
-		<br><%= @user.foundation.true_shade.description %>
-			<br><%= link_to "Click to see more foundations in your true shade", true_shade_path(@user.foundation.true_shade) %>
+<br>See your saved foundations
+
+<br>See your true shade
+
+<br>Edit your account
 
  
 	</body>
-</html>
+</html> 
