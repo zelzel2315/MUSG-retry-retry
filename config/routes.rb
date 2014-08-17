@@ -5,7 +5,7 @@ MUSG::Application.routes.draw do
   end
 
  # get 'true_shades/home' => 'true_shades#home', as: :home
-  root 'session#new'
+  root 'users#new'
 
   resource :session, only: [:new, :create, :destroy]
 
