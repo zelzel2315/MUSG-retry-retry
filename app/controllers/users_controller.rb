@@ -26,7 +26,7 @@ class UsersController < ApplicationController
 
   def edit
     @user = User.find(params[:id])
-    
+
   end
 
   def update
@@ -39,9 +39,10 @@ class UsersController < ApplicationController
   end
 
   def destroy
+    reset_session
     User.find(params[:id]).destroy
     # Exactly the same idea as this little number:
 #    User.find_by(id: params[:id])
-    redirect_to users_path
+    redirect_to new_user_path
   end
 end

@@ -59,8 +59,9 @@ foundations = Foundation.create([
   {name: "Rimmel Stay Matte Pressed Powder Foundation in Silky Beige", brand: "Rimmel", product: "Stay Matte Pressed Powder", shade: "Silky Beige", true_shade: shades[2]},
   {name: "MAC Studio Fix Powder Foundation Plus in N4", brand: "MAC", product: "Studio Fix Powder Plus", shade: "N4", true_shade: shades[4]},
   {name: "Revlon ColorStay Foundation in 150 Buff", brand: "Revlon", product: "ColorStay", shade: "150 Buff", true_shade: shades[4]},
-  {name: "Chanel Vitalumiere Aqua B10 Beige Pastel", brand: "Chanel", product: "Vitalumiere Aqua", shade: "B10 Beige Pastel", true_shade: shades[4]},
-  {name: "Lancome Teint Idole Ivoire 1C", brand: "Lancome", product: "Teint Idole", shade: "Ivoire 1C", true_shade: shades[4]}
+  {name: "Chanel Vitalumiere Aqua B10 in Beige Pastel", brand: "Chanel", product: "Vitalumiere Aqua", shade: "B10 Beige Pastel", true_shade: shades[4]},
+  {name: "Lancome Teint Idole in Ivoire 1C", brand: "Lancome", product: "Teint Idole", shade: "Ivoire 1C", true_shade: shades[4]},
+  {name: "Pur Minerals 4 in 1 Pressed Poweder Foundation in Tan", brand: "Pur Minerals", product: "4 in 1 Pressed Powder", shade: "Tan", true_shade: shades[2]}
 # Loreal True Match Foundation in W4 [0][1]
   ])
 

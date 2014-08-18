@@ -1,20 +1,22 @@
-<h1>Show True Shade</h1>
+<center><h1>Show True Shade</h1>
 
+<br><h4>(look, Colorado license plate!)
+<br><br><img src="http://www.thefcsp.org/web/files/9413/2458/7883/Plate.gif" width="200">
 
-
-<%= @true_shade.name %>
-	<br><br>
+<h3>"<%= @true_shade.name %>"
+	<h4><br><br>
 	<ul>
 		<% @foundations.each do |foundation| %>
 			<% if foundation.true_shade == @true_shade %>
 		<li>
 			<%= link_to foundation.name, true_shade_foundation_path(foundation.true_shade.id, foundation.id) %>
 		</li>
-	<% end %>
+	<% end %> 
 	<% end %>
 	</ul> 
 
 
 
-<br><%= link_to "Click to add another foundation in your true shade!!", new_true_shade_foundation_path(@true_shade, @foundation) %>
+<br><%= link_to "Click to add another foundation in your true shade!!", new_true_shade_foundation_path(@true_shade) %></center>
 	
+

@@ -4,7 +4,7 @@ class FoundationsController < ApplicationController
   def index
     @foundations = @true_shade_id.foundations
   end
-
+ 
   def new
     @foundation = Foundation.new
   end  
