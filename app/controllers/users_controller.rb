@@ -8,6 +8,11 @@ class UsersController < ApplicationController
     @user = User.new
     @is_signup = true 
   end 
+
+  def show
+    @user = User.find(params[:id]) 
+  end
+
   # acutally build user
   def create
     @user = User.new(params.require(:user).permit(:name, :email, :password, :password_confirmation, :foundation_id))
@@ -19,21 +24,18 @@ class UsersController < ApplicationController
     end
   end
 
-  def show
-    @user = User.find(params[:id])
-  end
-
   def edit
-     @user = User.new(params.require(:user).permit(:brand, :product, :shade))
-    if @user.save
-      session[:user_id] = @user.id.to_s
-      redirect_to true_shade_path
-    else 
-      render 'new'
-    end
+    @user = User.find(params[:id])
+    
   end
 
   def update
+    @user = User.find(params[:id])
+    if @user.update_attributes(params.require(:user).permit(:name, :email, :password, :password_confirmation, :foundation_id))
+      redirect_to user_path(@user)
+    else
+      render 'edit'
+    end
   end
 
   def destroy

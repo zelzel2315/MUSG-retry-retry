@@ -12,19 +12,54 @@
 		</title>
 	</head>
 	<body>
- 
+ users#show
 		<h1>Hi, <%= current_user.name %> :)</h1>
-		<h4><br>Your Current Matching Foundation: <strong><font size="5px"><%= @user.foundation.name %></font></strong>
-		<br><br>Your true shade is: <strong><font size="5px"><%= @user.foundation.true_shade.name %></font></strong>
-		<br><br><%= @user.foundation.true_shade.description %>
-		<br><br><%= link_to "Click to see more foundations in your true shade", true_shade_path(@user.foundation.true_shade) %></h4>
 
-<br>See your saved foundations
-
-<br>See your true shade
-
-<br>Edit your account
-
+<br><div class="panel-group" id="accordion">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+          Your Current Matching Foundation:
+        </a>
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse">
+      <div class="panel-body">
+        <%= @user.foundation.name %>
+      </div>
+    </div> 
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+          Your true shade is:
+        </a>
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse">
+      <div class="panel-body">
+        <%= @user.foundation.true_shade.name %>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+          What Your True Shade Means
+        </a>
+      </h4>
+    </div>
+    <div id="collapseThree" class="panel-collapse collapse">
+      <div class="panel-body">
+        <%= @user.foundation.true_shade.description %>
+      </div>
+    </div>
+  </div>
+</div>
+<br><%= link_to "Click to see more foundations in your true shade", true_shade_path(@user.foundation.true_shade) %></h4>
  
 	</body>
 </html> 

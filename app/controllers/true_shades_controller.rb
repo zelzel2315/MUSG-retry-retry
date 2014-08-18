@@ -30,7 +30,7 @@ class TrueShadesController < ApplicationController
     # With this decision object, attach it to the user
     # decision.user = current_user
     if true_shade.save
-      redirect_to true_shades_path
+      redirect_to true_shades_path 
     end
     # if !current_user
     #   redirect_to new_session_path

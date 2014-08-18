@@ -1,12 +1,5 @@
 <h1>User#index</h1>
 
-Hi, <%= current_user.name %>
+Hi, <%= current_user.name %> :)
 
-<br>See your saved foundations
-
-<br>See your true shade
-
-<br>Edit your account
-
-
- 
+<br><%= link_to "Click here to edit your profile", edit_user_path(current_user) %>

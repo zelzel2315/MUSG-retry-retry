@@ -21,7 +21,7 @@ class FoundationsController < ApplicationController
     end
   end
 
-  def show
+  def show 
     @foundation = Foundation.find(params[:id])
   end
 

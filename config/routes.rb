@@ -1,6 +1,6 @@
 MUSG::Application.routes.draw do
 
-  resources :true_shades, only: [:index, :new, :show, :create, :destroy, :edit] do
+  resources :true_shades, only: [:index, :new, :show, :create] do
     resources :foundations, only: [:index, :new, :show, :create, :destroy, :edit] 
   end
 
@@ -9,7 +9,7 @@ MUSG::Application.routes.draw do
 
   resource :session, only: [:new, :create, :destroy]
 
-  resources :users
+  resources :users, only: [:index, :new, :show, :create, :destroy, :edit, :update] 
 
   # get 'users' => 'users#index', as: :users
   # get 'users/new' => 'users#new', as: :new_user
